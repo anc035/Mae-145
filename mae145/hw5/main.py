@@ -61,7 +61,7 @@ class RRT():
             closestNode=self.node_list[indexInList]
             distance=self.calcDistNodeToPoint(closestNode,self.new_node)
 
-            if distance>.25:
+            if distance >.25:
                 self.new_node=self.calcQnearby(closestNode,self.new_node)
             if inCollision(closestNode,self.new_node,self.obstacle_list)==True:
                 continue
@@ -69,11 +69,12 @@ class RRT():
                 self.new_node.parent=indexInList
                 print(self.new_node)
                 self.node_list.append(self.new_node)
-                goalcheck=self.calcDistNodeToPoint(self.new_node,self.goal)
-                if goalcheck<1e-3:
-                    self.goal.parent=indexInList
-                    print("final new node")
-                    print(self.new_node)
+            goalcheck=self.calcDistNodeToPoint(self.new_node,self.goal)
+            if goalcheck<.1:
+                break
+                #self.goal.parent=indexInList
+                print("final new node")
+                print(self.new_node)
             # set the parent as index no of the node in the self.node_list
 
             # setting the parent of new node to start node 
