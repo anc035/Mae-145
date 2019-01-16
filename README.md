@@ -1,10 +1,13 @@
 # Mae-145
 Hw records for MAE 145: Intro to Robotic Planning and Estimation
+
 Instructor: Prof. Sonia Martinez
+
 Part 1 Classic planning algorithms
 Part 2 Probabilistic techniques for localization
 
 Syllabus
+
 • Motion planning overview.
 • Sensor-based motion planning: the bug algorithms.
 • Workspace decomposition and search algorithms on graphs
